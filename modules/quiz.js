@@ -1,5 +1,5 @@
 'use strict';
-
+/* ready */
 import {$, roll} from './nmlQ.js';
 import {q2html} from './question.js';
 
