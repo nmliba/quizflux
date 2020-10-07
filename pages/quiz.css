@@ -1,0 +1,14 @@
+/* quiz.css */
+
+#navbot {
+    bottom: 1em;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+    width: 100%;
+}
+#navbot a {
+    border: 2px outset black;
+    padding: .2em;
+    text-decoration: none;
+}
