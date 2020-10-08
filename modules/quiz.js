@@ -1,5 +1,5 @@
 'use strict';
-/* ready */
+
 import {$, roll} from './nmlQ.js';
 import {q2html} from './question.js';
 
@@ -43,31 +43,17 @@ const qz2html = function (quiz) {
         let quizHtmlElmSc = document.createElement('section');
 
         let h2 = document.createElement('h2');
-        let tx = document.createTextNode(name + ' Quiz Score');
+        let tx = document.createTextNode(`${quiz[0]} Score`);
         h2.appendChild(tx);
         quizHtmlElmSc.appendChild(h2);
         let d = document.createElement('div');
         d.style.fontSize = '1.5em';
 
-        let s = document.createElement('span');
-        s.setAttribute('id', 'rights');
-        s.style.backgroundColor = "#0f0";
-        tx = document.createTextNode('Correct answers: ');
-        s.appendChild(tx);
         let scoreElm = document.createElement('span');
         scoreElm.setAttribute('id', 'score');
-        tx = document.createTextNode(score(corrects, answers));
+        tx = document.createTextNode(`${score(corrects, answers)}/${quiz[1].length}`);
         scoreElm.appendChild(tx);
-        s.appendChild(scoreElm);
-        d.appendChild(s);
-
-        s = document.createElement('span');
-        s.setAttribute('id', 'totals');
-        tx = document.createTextNode(' - Total number of questions: ');
-        s.appendChild(tx);        
-        tx = document.createTextNode(quiz[1].length);
-        s.appendChild(tx);
-        d.appendChild(s);
+        d.appendChild(scoreElm);
 
         quizHtmlElmSc.appendChild(d);
         $('quiz').appendChild(quizHtmlElmSc);

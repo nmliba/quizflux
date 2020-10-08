@@ -25,7 +25,7 @@ const q2html = function (q, no, c, a) {
     let qn = document.createElement('article');
 
     let h3 = document.createElement('h3');
-    let tx = document.createTextNode(`Category ${q[0]}, Question ${no + 1}`);
+    let tx = document.createTextNode(`Category: ${q[0]}, Question: ${no + 1}`);
     h3.appendChild(tx);
     qn.appendChild(h3);
     
