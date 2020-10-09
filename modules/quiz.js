@@ -1,3 +1,4 @@
+/* the quiz module */
 'use strict';
 
 import {$, roll} from './nmlQ.js';
@@ -12,15 +13,15 @@ const score = function (c, a) {
     return tot;
 }
     
-const qzSetName = function (quiz, name) {
+export const qzSetName = function (quiz, name) {
         quiz[0] = name;
 };
 
-const qzAddQ = function (quiz, question) {
+export const qzAddQ = function (quiz, question) {
     quiz[1].push(question);
 };
 
-const qz2html = function (quiz) {
+export const qz2html = function (quiz) {
     let quizHtmlElm = document.createElement('section');
 
     let h2 = document.createElement('h2');
@@ -30,6 +31,7 @@ const qz2html = function (quiz) {
 
     let corrects = [];
     let answers = [];
+    
     for(let i = 0; i < quiz[1].length; i++) {
         corrects[i] = quiz[1][i][3];
         quizHtmlElm.appendChild(q2html(quiz[1][i], i, corrects, answers));
@@ -63,5 +65,3 @@ const qz2html = function (quiz) {
 
     return quizHtmlElm;
 };
-
-export {qzSetName, qzAddQ, qz2html};

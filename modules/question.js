@@ -1,27 +1,25 @@
+/* the question module */
 'use strict';
+
 import {$} from './nmlQ.js';
 
-const setCat = function (q, cat) {
+export const setCat = function (q, cat) {
         q[0] = cat;
 };
 
-const setQuestion = function (q, question) {
+export const setQuestion = function (q, question) {
         q[1] = question;
 };
 
-const addAnswer = function (q, answer) {
+export const addAnswer = function (q, answer) {
         q[2].push(answer);
 };
 
-const setCorrect = function (q, index) {
+export const setCorrect = function (q, index) {
         q[3] = index;
 };
 
-const isCorrect = function (q, answer) {
-        return q[3] === answer;
-};
-
-const q2html = function (q, no, c, a) {
+export const q2html = function (q, no, c, a) {
     let qn = document.createElement('article');
 
     let h3 = document.createElement('h3');
@@ -73,5 +71,3 @@ const q2html = function (q, no, c, a) {
     qn.appendChild(quea);
     return qn;
 }
-
-export {setCat, setQuestion, addAnswer, setCorrect, isCorrect, q2html};

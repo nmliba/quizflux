@@ -1,7 +1,8 @@
-/* quiz.js */
+/* quizExec.js */
+'use strict';
 
 import {$} from '../modules/nmlQ.js';
-import {qzSetName, qzAddQ, qz2html} from '../modules/quiz.js';
+import {qz2html} from '../modules/quiz.js';
 import {quiz0} from '../data/quiz0.js';
 
 const printQuiz = function (qz) {

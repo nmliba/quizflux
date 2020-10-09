@@ -1,4 +1,4 @@
-/* quiz0.js */
+/* quiz0.js a sample quiz as a module */
 
 /*
  * a quiz is an array of a name and an array of questions
