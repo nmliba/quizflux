@@ -14,62 +14,34 @@ export const quiz0 = [
     'Testquiz',
     [
         [
-            'JavaScript in the Browser',
-            'Which of the following lists contain only JavaScript types?',
+            'Git',
+            'What is a repo?',
             [
-                'Boolean, Number, Text, Array',
-                'Boolean, Number, Text, Collection',
-                'Boolean, Integer, Float, Text, Array',
-                'Boolean, Number, String, Array, Null'
-            ],
-            3
-        ],
-        [
-            'JavaScript in the Browser',
-            'Which of the following statements makes a module available to JavaScript?',
-            [
-                'require',
-                'request',
-                'import',
-                'require once'
+                'Another term for an array',
+                'A reproduction of an old painting',
+                'Directories and files of a project'
             ],
             2
         ],
         [
-            'JavaScript in the Browser',
-            'What is AJaX?',
+            'Git',
+            'What is a commit?',
             [
-                'A window cleaning chemical',
-                'A way for JavaScript to access a server',
-                'An iPhone app written in JavaScript',
-                'A specific integrated development environment'
+                'A checkpoint snapshot of a project repo',
+                'A copy of a file',
+                'A marriage certificate'
+            ],
+            0
+        ],
+        [
+            'Git',
+            'What is a branch?',
+            [
+                'A bank on a neighbourhood corner',
+                'A separate copy of project files meant for secure development',
+                'A subdirectory of the filesystem'
             ],
             1
-        ],
-        [
-            'JavaScript in the Browser',
-            'How do you add 1 to the variable foo?',
-            [
-                'foo = foo + 1;',
-                'foo++;',
-                'foo += 1;',
-                '++foo;',
-                'any of the above;',
-                'none of the above'
-            ],
-            4
-        ],
-        [
-            'JavaScript in the Browser',
-            'How do you define an array in JavaScript?',
-            [
-                "let arr = (1, 2, 'a', b);",
-                "let arr = (1; 2; 'a'; b);",
-                "let arr = [1, 2, 'a', b];",
-                "let arr = 1, 2, 'a', b;",
-                "let arr = \"1, 2, 'a', b\";",
-            ],
-            2
         ]
     ]
 ];

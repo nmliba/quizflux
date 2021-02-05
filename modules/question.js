@@ -48,11 +48,7 @@ export const q2html = function (q, no, c, a) {
         r.addEventListener('click', function(e) {
             for (let j = 0; j < q[2].length; j++) {
                 if (e.target.id === idpart + j) {
-                    //$(e.target.id).setAttribute('checked', 'checked');
-                    console.log(`index ${no}:${j} ${c[no] === j}`);
                     a[no] = j; 
-                } else {
-                    //$(idpart + j).setAttribute('disabled', 'disabled');
                 }
             }
         });

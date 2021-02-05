@@ -12,7 +12,7 @@ const score = function (c, a) {
     }
     return tot;
 }
-    
+
 export const qzSetName = function (quiz, name) {
         quiz[0] = name;
 };
@@ -25,18 +25,18 @@ export const qz2html = function (quiz) {
     let quizHtmlElm = document.createElement('section');
 
     let h2 = document.createElement('h2');
-    let tx = document.createTextNode(quiz[0] + ' Quiz');
+    let tx = document.createTextNode(quiz[0]);
     h2.appendChild(tx);
     quizHtmlElm.appendChild(h2);
 
     let corrects = [];
     let answers = [];
-    
+
     for(let i = 0; i < quiz[1].length; i++) {
         corrects[i] = quiz[1][i][3];
         quizHtmlElm.appendChild(q2html(quiz[1][i], i, corrects, answers));
     }
-    
+
     let btn = document.createElement('button');
     tx = document.createTextNode('Score the Quiz');
     btn.appendChild(tx);

@@ -1,24 +1,24 @@
 /*
- * nQuery
- * @version 0.99, 2020-09
+ * nmlQ
+ * @version 0.999, 2020-10
  * @author nml
  */
 
-var $ = function(foo) {
+export const $ = function(foo) {
     return document.getElementById(foo);
-}
+};
 
-const roll = function(foo) {
+export const roll = function(foo) {
     return Math.floor(Math.random() * foo + 1);
-}
+};
 
 /*
- * replace - with char in string
+ * replace some char with char 'c' in string at pos 'j'
  * s: input string
  * c: replacement character
  * j: position
  */
-const strCharRepl = function(s, c, j) {
+export const strCharRepl = function(s, c, j) {
     let ns = "";
     for (let i = 0; i < s.length; i++) {
         if (j === i) {
@@ -28,14 +28,12 @@ const strCharRepl = function(s, c, j) {
         }
     }
     return ns;
-}
+};
 
-const copyr = function(bar) {
+export const copyr = function(bar) {
     let now = new Date();
     let sml = document.createElement("small");
     let cpr = document.createTextNode(`\u00a9nml, ${bar}-${now.getFullYear()}`);
     sml.appendChild(cpr);
     $('cpryear').appendChild(sml);
-}
-
-export {$, roll, copyr, strCharRepl};
+};
