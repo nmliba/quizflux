@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewbox='0 0 99 50'>
+    <style>
+        svg { fill: #eee; }
+        text {
+            font-family: sans-serif;
+            font-size: 8px;
+            font-weight: 500;
+            text-anchor: left;
+        }
+        #kolding {
+            font-weight: 700;
+        }
+    </style>
+    <rect x='0' y='0' width='11' height='11'/>
+    <rect x='0' y='13' width='11' height='17'/>
+    <polygon points='13 0 13 17
+                    32 17 32 19
+                    13 19 13 30
+                    43 30 43 6
+                    24 6 24 0'/>
+    <polygon points='45 6 45 30
+                    67 30 67 19
+                    55 19 55 17
+                    69 17 69 30
+                    79 30 79 6'/>
+    <text x='-.5' y='39' textLength="79">ERHVERVSAKADEMI</text>
+    <text x='-.5' y='49' textLength="79" id="kolding">KOLDING</text>
+</svg>

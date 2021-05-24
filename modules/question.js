@@ -23,19 +23,19 @@ export const q2html = function (q, no, c, a) {
     let qn = document.createElement('article');
 
     let h3 = document.createElement('h3');
-    let tx = document.createTextNode(`Category: ${q[0]}, Question: ${no + 1}`);
+    let tx = document.createTextNode(`Category: ${q.category}, Question: ${no + 1}`);
     h3.appendChild(tx);
     qn.appendChild(h3);
-    
+
     let quep = document.createElement('p');
     let em = document.createElement('em');
-    let quet = document.createTextNode(`${q[1]}`);
+    let quet = document.createTextNode(`${q.question}`);
     em.appendChild(quet);
     quep.appendChild(em);
     qn.appendChild(quep);
-    
+
     let quea = document.createElement('p');
-    for (let i = 0; i < q[2].length; i++) {
+    for (let i = 0; i < q.answers.length; i++) {
         let span = document.createElement('span');
         let r = document.createElement('input');
         r.setAttribute('type', 'radio');
@@ -48,7 +48,7 @@ export const q2html = function (q, no, c, a) {
         r.addEventListener('click', function(e) {
             for (let j = 0; j < q[2].length; j++) {
                 if (e.target.id === idpart + j) {
-                    a[no] = j; 
+                    a[no] = j;
                 }
             }
         });
@@ -56,7 +56,7 @@ export const q2html = function (q, no, c, a) {
         let la = document.createElement('label');
         la.setAttribute('for', id);
         la.setAttribute('id', 'q' + i + 'lab');
-        tx = document.createTextNode(' ' + q[2][i]);
+        tx = document.createTextNode(' ' + q.answers[i]);
         la.appendChild(tx);
         span.appendChild(r);
         span.appendChild(la);

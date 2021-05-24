@@ -25,16 +25,20 @@ export const qz2html = function (quiz) {
     let quizHtmlElm = document.createElement('section');
 
     let h2 = document.createElement('h2');
-    let tx = document.createTextNode(quiz[0]);
+    let tx = document.createTextNode(quiz.quizName);
     h2.appendChild(tx);
     quizHtmlElm.appendChild(h2);
+    let c = document.createElement('p');
+    tx = document.createTextNode(quiz.context);
+    c.appendChild(tx);
+    quizHtmlElm.appendChild(c);
 
     let corrects = [];
     let answers = [];
 
-    for(let i = 0; i < quiz[1].length; i++) {
-        corrects[i] = quiz[1][i][3];
-        quizHtmlElm.appendChild(q2html(quiz[1][i], i, corrects, answers));
+    for(let i = 0; i < quiz.questions.length; i++) {
+        corrects[i] = quiz.questions[i].correctAnswer;
+        quizHtmlElm.appendChild(q2html(quiz.questions[i], i, corrects, answers));
     }
 
     let btn = document.createElement('button');
@@ -45,7 +49,7 @@ export const qz2html = function (quiz) {
         let quizHtmlElmSc = document.createElement('section');
 
         let h2 = document.createElement('h2');
-        let tx = document.createTextNode(`${quiz[0]} Score`);
+        let tx = document.createTextNode(`${quiz.name} Score`);
         h2.appendChild(tx);
         quizHtmlElmSc.appendChild(h2);
         let d = document.createElement('div');
